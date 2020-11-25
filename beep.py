@@ -48,15 +48,31 @@ if __name__=="__main__":
     
     short = subparsers.add_parser('short', help='Make a short beep.')
     short.add_argument('--pin',type=int, help='The GPIO pin number the beeper is on.',default=12)
-    short.set_defaults(func=pulseBeep)
+    short.set_defaults(func=shortBeep)
+
+    medium = subparsers.add_parser('medium', help='Make a medium beep.')
+    medium.add_argument('--pin',type=int, help='The GPIO pin number the beeper is on.',default=12)
+    medium.set_defaults(func=mediumBeep)
+
+    longParser = subparsers.add_parser('long', help='Make a long beep.')
+    longParser.add_argument('--pin',type=int, help='The GPIO pin number the beeper is on.',default=12)
+    longParser.set_defaults(func=longBeep)
+
+    warningParser = subparsers.add_parser('warning', help='Make a warning sound.')
+    warningParser.add_argument('--pin',type=int, help='The GPIO pin number the beeper is on.',default=12)
+    warningParser.set_defaults(func=warning)
+
+    confirmedParser = subparsers.add_parser('confirmed', help='Make a confirmed sound.')
+    confirmedParser.add_argument('--pin',type=int, help='The GPIO pin number the beeper is on.',default=12)
+    confirmedParser.set_defaults(func=confirmed)
     
-    warning = subparsers.add_parser('warning', help='Make a warning sound.')
-    warning.add_argument('--pin',type=int, help='The GPIO pin number the beeper is on.',default=12)
-    warning.set_defaults(func=warning)
+    brrParser = subparsers.add_parser('brr', help='Make a brr sound.')
+    brrParser.add_argument('--pin',type=int, help='The GPIO pin number the beeper is on.',default=12)
+    brrParser.set_defaults(func=brr)
     
     args = parser.parse_args()
     try:
-        args.func(args)
+        args.func(args.pin)
     except AttributeError as e:
         parser.print_help()
         

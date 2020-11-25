@@ -12,6 +12,7 @@ def beepDuration(pin=12,duration=1):
 shortBeep = lambda pin=12: beepDuration(pin,.05)
 mediumBeep = lambda pin=12: beepDuration(pin,.25)
 longBeep = lambda pin=12: beepDuration(pin,.5)
+
 def pulseBeep(pin=12,freq=4,duration=1):
     pi.setwarnings(False)
     pi.setmode(pi.BCM)
@@ -24,6 +25,7 @@ def pulseBeep(pin=12,freq=4,duration=1):
     pi.output(pin,pi.LOW)
     pi.cleanup()
 
+
 if __name__=="__main__":
-    shortBeep()
+    pulseBeep(freq=2,duration=.2)
         

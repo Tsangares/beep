@@ -55,5 +55,9 @@ if __name__=="__main__":
     warning.set_defaults(func=warning)
     
     args = parser.parse_args()
-    args.func(args)
+    try:
+        args.func(args)
+    except AttributeError as e:
+        parser.print_help()
+        
     

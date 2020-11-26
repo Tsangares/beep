@@ -4,7 +4,7 @@ long_description = open("README.md").read()
 
 setup(
         name='pibeep',
-        version='0.0.1.2',
+        version='0.0.1.4',
         description='Buzzer utility for pi',
         long_description=long_description,
         long_description_content_type="text/markdown",

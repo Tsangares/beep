@@ -4,7 +4,7 @@ long_description = open("README.md").read()
 
 setup(
         name='pibeep',
-        version='0.0.1.1',
+        version='0.0.1.2',
         description='Buzzer utility for pi',
         long_description=long_description,
         long_description_content_type="text/markdown",
@@ -13,7 +13,6 @@ setup(
         include_package_data=True,
         packages=find_packages(),
         install_requires=[
-            'RPi.GPIO',
             ],
         entry_points={
             'console_scripts': [

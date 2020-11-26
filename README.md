@@ -4,13 +4,21 @@ This is a beeping utility for the common buzzer. This package comes with a varie
 
 # Installation
 
-To install simply install the pip package.
+This package requires `RPi.GPIO`, which I installed on arch arm using
+
+    yay -S python-raspberry-gpio
+	
+But ubuntu or rasbian can use,
+
+    pip install RPi.GPIO
+
+To install pibeep simply install the pip package.
 
     pip install pibeep
 	
 You can then look at the examples on how to run as a cli. You can also import it into your project using,
 
-	from beep import pulseBeep,beepDuration
+	from pibeep import pulseBeep,beepDuration
 	beepDuration(pin=12,duration=.33) #beeper on pin 12, on for .33 sec
 	pulseBeep(pin=12,freq=25,duration=1) #pulse beep at 25HZ for 1 seccond
 

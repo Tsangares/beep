@@ -36,7 +36,8 @@ You can then look at the examples on how to run as a cli. You can also import it
 
 The cli can be use any of the listed above beeps in the format as the following commands:
 
-    beep.py warning --pin 12
-	beep.py short --pin 12
-	beep.py brr --pin 12
+    beep warning --pin 12
+	beep short --pin 12
+	beep brr --pin 12
 
+Usually I need to run it as sudo to have the correct permissions, but it depends on your setup. 

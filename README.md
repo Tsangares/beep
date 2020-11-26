@@ -1,3 +1,7 @@
+## Context
+
+This tool is showcased in the project [IotaWorkshop](https://github.com/Tsangares/iotaworkshop)
+
 # Summary
 
 This is a beeping utility for the common buzzer. This package comes with a variety of beeps that can be called from a command line inteface or imported from python.

@@ -2,7 +2,7 @@
 
 This is a beeping utility for the common buzzer. This package comes with a variety of beeps that can be called from a command line inteface or imported from python.
 
-# Installationg
+# Installation
 
 To install simply install the pip package.
 

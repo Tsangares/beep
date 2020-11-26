@@ -2,6 +2,7 @@ import time
 import RPi.GPIO as pi
 import argparse
 
+#Make single beep for a duration
 def beepDuration(pin=12,duration=1):
     pi.setwarnings(False)
     pi.setmode(pi.BCM)
@@ -11,6 +12,7 @@ def beepDuration(pin=12,duration=1):
     pi.output(pin,pi.LOW)
     pi.cleanup()
 
+#Make a series of beepss at a specified frequency
 def pulseBeep(pin=12,freq=4,duration=1):
     pi.setwarnings(False)
     pi.setmode(pi.BCM)

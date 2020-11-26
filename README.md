@@ -6,7 +6,7 @@ This is a beeping utility for the common buzzer. This package comes with a varie
 
 To install simply install the pip package.
 
-    pip install beep
+    pip install pibeep
 	
 You can then look at the examples on how to run as a cli. You can also import it into your project using,
 

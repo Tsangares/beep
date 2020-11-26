@@ -44,7 +44,7 @@ def longBeep(pin):
     beepDuration(pin,.5)
 
     
-if __name__=="__main__":
+def main():
     parser = argparse.ArgumentParser(description='Variety of beeps')
     subparsers = parser.add_subparsers(help='Choose a prompt.')
     
